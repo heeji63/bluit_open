@@ -49,6 +49,7 @@
   #header .gnb{display: none;}
   .sitemap .menu{padding:20vw 3.5vw 0 0;}
   .sitemap .menu li a{font-size: 50px;}
+  .sitemap .menu li a:hover{font-size: 60px;}
   .content1 .main-visual li:first-child{display: none;}
   .content1 .main-visual li:last-child{width:100%;}
   .content1 .main-visual li .main-tit{font-size: 10vw;line-height: 1.2;margin-bottom:13vw;}
