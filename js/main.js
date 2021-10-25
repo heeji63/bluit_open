@@ -10,12 +10,12 @@ $(document).ready(function() {
   //     type: "fraction",
   //   },
   // });
-  // $(".menu-btn").click(function(){
-  //   $(".sitemap").fadeIn(200);
-  // });
-  // $(".close-btn").click(function(){
-  //   $(".sitemap").fadeOut(200);
-  // });
+  $(".menu-btn").click(function(){
+    $(".sitemap").fadeIn(200);
+  });
+  $(".close-btn").click(function(){
+    $(".sitemap").fadeOut(200);
+  });
   var cont1 = $("#About");
   var cont2 = $("#Service");
   var cont3 = $("#Business");
