@@ -56,8 +56,8 @@ html,body {position: relative;height: 100%;min-height:940px;}
 .content2 .inner{position: relative;}
 .sub-tit{padding:3vw 0 4vw;font-size: 2.0835vw;text-align: center;color:#171717;}
 .highlighter {text-decoration: none;display: inline-block;position: relative;}
-.highlighter:after {background: none repeat scroll 0 0 transparent;bottom: 4px;content: "";display: block;height: 7px;left: 0;position: absolute;background: #52C3EE;transition: width 0.7s ease 0s, left 0.7s ease 0s;width: 100%;z-index:-1;}
-/* .highlighter.on:after {width: 100%;left: 0;} */
+.highlighter:after {background: none repeat scroll 0 0 transparent;bottom: 4px;content: "";display: block;height: 7px;left: 50%;position: absolute;background: #52C3EE;transition: width 0.7s ease 0s, left 0.7s ease 0s;width: 0;z-index:-1;}
+.highlighter.on:after {width: 100%;left: 0;}
 .service-wrap{width:80%;margin: 0 auto;}
 .service-wrap ul li{float: left;width:calc(33.3333% - 30px);min-height:22vw;margin-right: 45px;border-radius: 10px;box-shadow: 0 4px 8px rgba(190, 193, 224, 0.32);overflow: hidden;}
 .service-wrap ul li:last-child{margin-right: 0;}

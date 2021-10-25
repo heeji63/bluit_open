@@ -86,14 +86,14 @@ $(document).ready(function() {
     }
   });
   // Scroll Animation (sa, 스크롤 애니메이션)
-  const saTriggerMargin = 300;
-  const saElementList = document.querySelectorAll('.sa');
+  const hiTriggerMargin = 300;
+  const hiElementList = document.querySelectorAll('.sub-tit .highlighter');
 
   const saFunc = function() {
-    for (const element of saElementList) {
-      if (!element.classList.contains('show')) {
-        if (window.innerHeight > element.getBoundingClientRect().top + saTriggerMargin) {
-          element.classList.add('show');
+    for (const element of hiElementList) {
+      if (!element.classList.contains('on')) {
+        if (window.innerHeight > element.getBoundingClientRect().top + hiTriggerMargin) {
+          element.classList.add('on');
         }
       }
     }
