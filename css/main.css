@@ -65,7 +65,7 @@ html,body {position: relative;height: 100%;min-height:940px;}
 .service-wrap ul li .txt{height:10vw;padding:25px 30px;background: #fff;}
 .service-wrap ul li .txt h5{font-size: 20px;color:#333;}
 .service-wrap ul li .txt p{color:#666;margin-top:15px;}
-.bg-figure .figure{position: absolute;z-index: -1;}
+.bg-figure .figure{position: absolute;z-index: -1;transition: all ease 0.2s;}
 .bg-figure .rectangle1{width:17px;height:17px;background: #23177B;transform: rotate(-20deg);top:16vw;left:5.7vw;}
 .bg-figure .rectangle2{width:34px;height:34px;background: #5DCBFA;transform: rotate(30deg);top:7vw;left:52.5vw;}
 .bg-figure .rectangle3{width:26px;height:26px;background: #23177B;transform: rotate(-25deg);bottom:10vw;right:36.5vw;}
