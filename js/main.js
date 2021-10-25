@@ -11,14 +11,41 @@ $(document).ready(function() {
   //   },
   // });
   $(".menu-btn").click(function(){
+    $("html").css("overflow","hidden");
     $(".sitemap").fadeIn(200);
   });
   $(".close-btn").click(function(){
+    $("html").css("overflow","auto");
     $(".sitemap").fadeOut(200);
   });
-  var cont1 = $("#About");
-  var cont2 = $("#Service");
-  var cont3 = $("#Business");
+  var $menu = $('.gnb-ul li'),
+      $menuMobile = $('.menu li'),
+      $contents = $('.contents'),
+      $doc = $('html, body');
+      // cont1 = $("#About"),
+      // cont2 = $("#Service"),
+      // cont3 = $("#Business");
+  $(function () {
+    // 해당 섹션으로 스크롤 이동
+    $menu.on('click','a', function(e){
+      var $target = $(this).parent(),
+          idx = $target.index(),
+          section = $contents.eq(idx),
+          offsetTop = section.offset().top;
+      $doc.stop().animate({
+        scrollTop :offsetTop }, 300); return false;
+      });
+    $menuMobile.on('click','a', function(e){
+      var $target = $(this).parent(),
+          idx = $target.index(),
+          section = $contents.eq(idx),
+          offsetTop = section.offset().top;
+      $("html").css("overflow","auto");
+      $(".sitemap").fadeOut(200);
+      $doc.stop().animate({
+        scrollTop :offsetTop }, 300); return false;
+      });
+    });
 
   var swiper = new Swiper(".mySwiper", {
     loop: true,
@@ -59,19 +86,19 @@ $(document).ready(function() {
     }
   });
   // Scroll Animation (sa, 스크롤 애니메이션)
-      // const saTriggerMargin = 300;
-      // const saElementList = document.querySelectorAll('.sa');
-      //
-      // const saFunc = function() {
-      //   for (const element of saElementList) {
-      //     if (!element.classList.contains('show')) {
-      //       if (window.innerHeight > element.getBoundingClientRect().top + saTriggerMargin) {
-      //         element.classList.add('show');
-      //       }
-      //     }
-      //   }
-      // }
-      //
-      // window.addEventListener('load', saFunc);
-      // window.addEventListener('scroll', saFunc);
+  const saTriggerMargin = 300;
+  const saElementList = document.querySelectorAll('.sa');
+
+  const saFunc = function() {
+    for (const element of saElementList) {
+      if (!element.classList.contains('show')) {
+        if (window.innerHeight > element.getBoundingClientRect().top + saTriggerMargin) {
+          element.classList.add('show');
+        }
+      }
+    }
+  }
+
+  window.addEventListener('load', saFunc);
+  window.addEventListener('scroll', saFunc);
 });
