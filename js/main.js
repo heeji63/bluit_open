@@ -1,15 +1,5 @@
 $(document).ready(function() {
-  // var swiper = new Swiper(".mySwiper", {
-  //   direction: "vertical",
-  //   slidesPerView: 1,
-  //   spaceBetween: 30,
-  //   mousewheel: true,
-  //   pagination: {
-  //     el: ".swiper-pagination",
-  //     // clickable: true,
-  //     type: "fraction",
-  //   },
-  // });
+  $(".main-visual").addClass("on");
   $(".menu-btn").click(function(){
     $("html").css("overflow","hidden");
     $(".sitemap").fadeIn(200);
@@ -86,19 +76,17 @@ $(document).ready(function() {
     }
   });
   // Scroll Animation (sa, 스크롤 애니메이션)
-  const hiTriggerMargin = 300;
-  const hiElementList = document.querySelectorAll('.sub-tit .highlighter');
-
-  const saFunc = function() {
-    for (const element of hiElementList) {
-      if (!element.classList.contains('on')) {
-        if (window.innerHeight > element.getBoundingClientRect().top + hiTriggerMargin) {
-          element.classList.add('on');
+    var hiTriggerMargin = 300;
+    var hiElementList = document.querySelectorAll('.sub-tit .highlighter');
+    var saFunc = function() {
+      $.each(hiElementList, function(idx, element){
+        if (!element.classList.contains('on')) {
+          if (window.innerHeight > element.getBoundingClientRect().top + hiTriggerMargin) {
+            element.classList.add('on');
+          }
         }
-      }
-    }
-  }
-
-  window.addEventListener('load', saFunc);
-  window.addEventListener('scroll', saFunc);
+      });
+    };
+    window.addEventListener('load', saFunc);
+    window.addEventListener('scroll', saFunc);
 });
