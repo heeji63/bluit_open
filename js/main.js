@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  $(".main-visual").addClass("on");
   $(".menu-btn").click(function(){
     $("html").css("overflow","hidden");
     $(".sitemap").fadeIn(200);
@@ -22,9 +21,18 @@ $(document).ready(function() {
           idx = $target.index(),
           section = $contents.eq(idx),
           offsetTop = section.offset().top;
-      $doc.stop().animate({
-        scrollTop :offsetTop }, 300); return false;
-      });
+      $doc.stop().animate(
+        { scrollTop :offsetTop },
+        500,
+        'swing',
+        // function() {
+        //     $( this ).animate( {
+        //       scrollTop :offsetTop,
+        //     }, 350, 'linear');
+        //   }
+      );
+      return false;
+    });
     $menuMobile.on('click','a', function(e){
       var $target = $(this).parent(),
           idx = $target.index(),
@@ -34,12 +42,16 @@ $(document).ready(function() {
       $(".sitemap").fadeOut(200);
       $doc.stop().animate({
         scrollTop :offsetTop }, 300); return false;
-      });
     });
+  });
 
   var swiper = new Swiper(".mySwiper", {
     loop: true,
-    autoplay:true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction:false,
+    },
+    speed:700,
     slidesPerView: 2,
     spaceBetween: 0,
     navigation: {
@@ -56,7 +68,7 @@ $(document).ready(function() {
         }
         // console.log(txtShowNum);
         $(".txt-slider").find("li").hide();
-        $(".txt-slider").find("li").eq(txtShowNum).fadeIn(300);
+        $(".txt-slider").find("li").eq(txtShowNum).fadeIn(200);
         // $(".txt-slider li").find("span").addClass("on");
         $(".txt-slider li").find("span").removeClass("on");
         $(".txt-slider li:eq("+txtShowNum+")").find("span").addClass("on");
@@ -77,7 +89,7 @@ $(document).ready(function() {
   });
   // Scroll Animation (sa, 스크롤 애니메이션)
     var hiTriggerMargin = 300;
-    var hiElementList = document.querySelectorAll('.sub-tit .highlighter');
+    var hiElementList = document.querySelectorAll('.contents');
     var saFunc = function() {
       $.each(hiElementList, function(idx, element){
         if (!element.classList.contains('on')) {
