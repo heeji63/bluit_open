@@ -167,7 +167,9 @@
     100% {top:8vw;}
   }
   .business-wrap ul li{width:100%;}
-  .txt-slider{display: none;}
+  /* .txt-slider   모바일버전 일 때 텍스트가 보일 수 있도록 수정*/
+  /* .txt-slider{display: none;} */
+  .txt-slider {width: auto; position: initial;}
   .swiper-button-prev{right:auto;left:0;top:50%;margin-top:calc(0px - (var(--swiper-navigation-size)/ 2));}
   .swiper-button-next{right:0;top:50%;margin-top:calc(0px - (var(--swiper-navigation-size)/ 2));}
   .footer .info li{float: none;margin-left:0;}
