@@ -9,6 +9,7 @@ button{margin:0;padding:0;font-family:'Noto Sans KR', Arial;}
 html,body {position: relative;height: 100%;min-height:940px;font-family:'Montserrat', 'Noto Sans KR', Arial;}
 body {font-family:'Montserrat', 'Noto Sans KR', Arial;}
 input {font-family: 'Noto Sans KR', Arial;}
+label {font-family: 'Noto Sans KR', Arial;}
 /* header */
 #header{position: fixed;z-index: 998;width:100%;}
 #header .header-inner{padding:3.5vw 3.5vw 0;}

@@ -73,6 +73,24 @@ $(document).ready(function() {
       280:
       {
         slidesPerView: 1,
+        on: {
+          slideChangeTransitionEnd : function(){
+            console.log(this.activeIndex);
+            var active = this.activeIndex;
+            var txtShowNum = active+2;
+            if(active > 11){
+              txtShowNum = 0;
+            }
+            // console.log(txtShowNum);
+            $(".txt-slider").find("li").hide();
+            $(".txt-slider").find("li").eq(txtShowNum).fadeIn(200);
+            // $(".txt-slider li").find("span").addClass("on");
+            $(".txt-slider li").removeClass("on");
+            $(".txt-slider li:eq("+txtShowNum+")").addClass("on");
+            $(".txt-slider li").find("span").removeClass("on");
+            $(".txt-slider li:eq("+txtShowNum+")").find("span").addClass("on");
+          }
+        },
       },
       // 화면의 넓이가 640px 이상일 때
       768:
