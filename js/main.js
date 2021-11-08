@@ -1,12 +1,4 @@
 $(document).ready(function() {
-  $(".menu-btn").click(function(){
-    $("html").css("overflow","hidden");
-    $(".sitemap").fadeIn(200);
-  });
-  $(".close-btn").click(function(){
-    $("html").css("overflow","auto");
-    $(".sitemap").fadeOut(200);
-  });
   var $menu = $('.gnb-ul li'),
       $menuMobile = $('.menu li'),
       $contents = $('.contents'),
@@ -49,7 +41,7 @@ $(document).ready(function() {
     loop: true,
     autoplay: {
       delay: 3000,
-      // disableOnInteraction:false,
+      disableOnInteraction:false,
     },
     speed:700,
     slidesPerView: 2,
