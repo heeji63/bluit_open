@@ -104,6 +104,8 @@
   .content3.contents{height:auto;}
   .business-wrap ul li{width:50%;}
   .content4.contents{height:auto;}
+  .txt-slider li{padding:5vw;}
+  .txt-slider li p{font-size: 13px;}
   .swiper-button-prev{width:40px;height:40px;right:calc(3.5vw + 40px);}
   .swiper-button-prev::after{font-size: 20px;}
   .swiper-button-next{width:40px;height:40px;}

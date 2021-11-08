@@ -49,7 +49,7 @@ $(document).ready(function() {
     loop: true,
     autoplay: {
       delay: 3000,
-      disableOnInteraction:false,
+      // disableOnInteraction:false,
     },
     speed:700,
     slidesPerView: 2,
@@ -70,6 +70,8 @@ $(document).ready(function() {
         $(".txt-slider").find("li").hide();
         $(".txt-slider").find("li").eq(txtShowNum).fadeIn(200);
         // $(".txt-slider li").find("span").addClass("on");
+        $(".txt-slider li").removeClass("on");
+        $(".txt-slider li:eq("+txtShowNum+")").addClass("on");
         $(".txt-slider li").find("span").removeClass("on");
         $(".txt-slider li:eq("+txtShowNum+")").find("span").addClass("on");
       }
