@@ -1,18 +1,29 @@
 @media (max-width:1500px){
+  /* main */
   .service-wrap ul li .txt p br{display: none;}
 }
 @media (max-width:1400px){
+  /* main */
   .service-wrap ul li .txt{height:15vw;}
   .content1 .main-visual li:first-child{top:12.5vw;}
   .content1 .main-visual li:last-child{top:16vw}
+  /* contact */
+  .items-3{width:calc(25% - 30px);}
+  .items-6{width:calc(50% - 20px);}
+  .contact-wrap-02 .items-3{margin-left: 40px;}
+  .items .service-ul li input[type=checkbox] + label{font-size: 14px;}
+  .items .service-ul li input[type=checkbox] + label::before{vertical-align: text-top;}
+  .items .service-ul li input[type=checkbox]:checked + label::after{top:3.5px;}
 }
 @media (max-width:1300px){
+  /* main */
   .service-wrap ul li .txt{height:17vw;}
   .business-wrap ul li p{font-size: 14px;}
   .swiper-button-prev{width:60px;height:60px;right:calc(3.5vw + 60px);}
   .swiper-button-next{width:60px;height:60px;}
 }
 @media (max-width:1200px){
+  /* main */
   .service-wrap ul li .txt{height:22vw;}
   .business-wrap ul li h5{margin-bottom: 15px;}
   .business-wrap ul li p{font-size: 13px;}
@@ -24,6 +35,7 @@
   .footer .info li{margin-left: 15px;font-size: 13px;}
 }
 @media (max-width:1024px) {
+  /* main */
   .sitemap .menu li a{font-size: 6vw;}
   .sitemap .menu li a:hover{font-size: 6.5vw;}
   .sitemap .menu li{margin-top: 20px;}
@@ -115,6 +127,12 @@
   .footer .foot-copyright{float: none}
   .footer .info{display:inline-block;float: none;}
   .footer .info li:first-child{margin-left: 0;}
+  /* contact */
+  #contact .inner{padding: 6.28vw 8.5vw;}
+  .sub-tit-wrap .sub-tit{font-size: 3vw;}
+  .sub-tit-wrap p{font-size: 1.7vw;}
+  .items .service-ul{flex-wrap: wrap;}
+  .items .service-ul li{flex-basis: 150px;flex-shrink: 1;}
 }
 @media (max-width:768px) {
   html,body {min-height:100%;}
@@ -122,6 +140,7 @@
   .sitemap .menu{padding:20vw 3.5vw 0 0;}
   .sitemap .menu li a{font-size: 50px;}
   .sitemap .menu li a:hover{font-size: 60px;}
+  /* main */
   .service-wrap{width:90%;}
   .content1 .main-visual li:first-child{display: none;}
   .content1 .main-visual li:last-child{width:100%;}
@@ -175,8 +194,7 @@
   .footer .info li{float: none;margin-left:0;}
 }
 @media (max-width:500px){
-  #header .logo a img{width:110px;}
-  .sitemap .logo a img{width:110px;}
+  /* main */
   .service-wrap{width:100%;}
   .content1 .main-visual li .main-tit{font-size:33px;}
   .content1 .main-visual li .sub-txt h4{font-size: 25px;}
@@ -194,6 +212,7 @@
   }
 }
 @media (max-width:320px){
+  /* main */
   .service-wrap ul li .txt h5{font-size: 17px;}
   .service-wrap ul li .txt p{font-size: 13px;}
 }

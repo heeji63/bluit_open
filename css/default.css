@@ -10,12 +10,13 @@ html,body {position: relative;height: 100%;min-height:940px;font-family:'Montser
 body {font-family:'Montserrat', 'Noto Sans KR', Arial;}
 input {font-family: 'Noto Sans KR', Arial;}
 label {font-family: 'Noto Sans KR', Arial;}
+textarea {font-family: 'Noto Sans KR', Arial;}
 /* header */
 #header{position: fixed;z-index: 998;width:100%;}
 #header .header-inner{padding:3.5vw 3.5vw 0;}
-#header .logo{float: left;}
+#header .logo{float: left;margin-top: -5px;}
 #header .logo a{font-size: 0;}
-#header .logo a img{display: block;}
+#header .logo a img{display: block;width:55px;}
 #header .gnb-wrap{float: right;}
 #header .gnb{float: left;}
 #header .gnb .gnb-ul{margin-right:55px;}
@@ -25,9 +26,9 @@ label {font-family: 'Noto Sans KR', Arial;}
 #header .gnb .gnb-ul li a:hover{color:#FF3D56;}
 #header .menu-btn{border:none;background: none;float: right;cursor: pointer;}
 .sitemap{width:100%;height:100%;background: url("../images/menu_bg.png") no-repeat left bottom #F2F3F7;background-size: contain;position: fixed;top:0;left:0;z-index: 999;display: none;}
-.sitemap .logo{float: left;margin:3.5vw 0 0 3.5vw;}
+.sitemap .logo{float: left;margin:3.5vw 0 0 3.5vw;margin-top:calc(3.5vw - 5px);}
 .sitemap .logo a{font-size: 0;}
-.sitemap .logo a img{display: block;}
+.sitemap .logo a img{display: block;width:55px;}
 .sitemap .close-btn{border:none;position: absolute;top:3.5vw;right:4vw;cursor: pointer;}
 .sitemap .menu{padding:15vw 3.5vw 0 0;float: right;}
 .sitemap .menu li{margin-top:15px;text-align: right;}
