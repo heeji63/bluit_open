@@ -1,0 +1,44 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('http://fonts.googleapis.com/css?family=Montserrat+Alternates');
+/* 'montserrat' */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/Montserrat-Light.eot);
+  src: local('Montserrat Light'),
+       local('Montserrat-Light'),
+       url(../fonts/Montserrat-Light.eot?#iefix) format('embedded-opentype'),
+       url(../fonts/Montserrat-Light.woff) format('woff'),
+       url(../fonts/Montserrat-Light.otf) format('truetype');
+  unicode-range:U+0041-005A, U+0061-007A;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Montserrat-Regular.eot);
+  src: local('Montserrat Regular'),
+       local('Montserrat-Regular'),
+       url(../fonts/Montserrat-Regular.eot?#iefix) format('embedded-opentype'),
+       url(../fonts/Montserrat-Regular.woff) format('woff'),
+       url(../fonts/Montserrat-Regular.otf) format('truetype');
+  unicode-range:U+0041-005A, U+0061-007A;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/Montserrat-Bold.eot);
+  src: local('Montserrat Bold'),
+       local('Montserrat-Bold'),
+       url(../fonts/Montserrat-Bold.eot?#iefix) format('embedded-opentype'),
+       url(../fonts/Montserrat-Bold.woff) format('woff'),
+       url(../fonts/Montserrat-Bold.otf) format('truetype');
+  unicode-range:U+0041-005A, U+0061-007A;
+}
+
+body{font-family:'Montserrat', 'Noto Sans KR', Arial;}
