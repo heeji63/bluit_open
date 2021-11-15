@@ -28,7 +28,8 @@
 .content2{background:#fff;}
 .content2 .inner{position: relative;}
 .service-wrap{width:80%;margin: 0 auto;}
-.service-wrap ul li{float: left;width:calc(33.3333% - 30px);min-height:22vw;margin-right: 45px;border-radius: 10px;box-shadow: 0 4px 8px rgba(190, 193, 224, 0.32);overflow: hidden;transition: opacity 0.3s ease-in-out, transform 0.7s ease;}
+.service-wrap ul{display: flex;}
+.service-wrap ul li{width:calc(33.3333% - 30px);margin-right: 45px;border-radius: 10px;box-shadow: 0 4px 8px rgba(190, 193, 224, 0.32);overflow: hidden;transition: opacity 0.3s ease-in-out, transform 0.7s ease;}
 .contents.on .service-wrap ul li{animation: showService 0.7s ease-in-out;animation-fill-mode: both;}
 .contents.on .service-wrap ul li:nth-child(2){animation-delay: 0.4s;}
 .contents.on .service-wrap ul li:last-child{animation-delay: 0.8s;}
@@ -40,7 +41,7 @@
 }
 .service-wrap ul li:last-child{margin-right: 0;}
 .service-wrap ul li .img img{display: block;width:100%;}
-.service-wrap ul li .txt{height:12.5vw;padding:25px 30px;background: #fff;}
+.service-wrap ul li .txt{padding:25px 30px;background: #fff;}
 .service-wrap ul li .txt h5{font-size: 20px;color:#333;}
 .service-wrap ul li .txt p{color:#666;margin-top:15px;}
 .bg-figure .figure{position: absolute;z-index: -1;transition: all ease 0.2s;}

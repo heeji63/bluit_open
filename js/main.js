@@ -99,6 +99,38 @@ $(document).ready(function() {
       }
     }
   });
+  // 더욱 고도화된 IT서비스 모바일버전 작업
+  $('.service-owl').owlCarousel({
+      loop:true,
+      margin:50,
+      responsiveClass:true,
+      responsive:{
+          0:{
+              items:1,
+              nav:true
+          },
+          768:{
+              items:2,
+              nav:true
+          }
+      }
+  });
+  // BLU-IT이 잘하는 일, 모바일버전 작업
+  $('.business-owl').owlCarousel({
+      loop:true,
+      margin:50,
+      responsiveClass:true,
+      responsive:{
+          0:{
+              items:1,
+              nav:false
+          },
+          768:{
+              items:2,
+              nav:false
+          }
+      }
+  });
   // Scroll Animation (sa, 스크롤 애니메이션)
     var hiTriggerMargin = 300;
     var hiElementList = document.querySelectorAll('.contents');

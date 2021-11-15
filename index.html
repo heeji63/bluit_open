@@ -42,15 +42,6 @@
                 <li><a href="#Service">services</a></li>
                 <li><a href="#Business">business</a></li>
                 <li><a href="#Work">work</a></li>
-                <!-- <li>
-                  <a href="#Work">
-                    <div id="app">
-                      {{ message }}
-                    </div>
-                  </a>
-                </li> -->
-
-                <!-- <li><a href="#">contact</a></li> -->
               </ul>
             </div>
             <button type="button" class="menu-btn"><img src="./img/menu_btn.png" alt="menu"></button>
@@ -101,6 +92,36 @@
                 우리는 300여개의 이상의 기업에 <br />
                 <span class="highlighter">더욱 고도화된 IT서비스</span>를 제공합니다.
               </h3>
+              <div class="owl-carousel owl-theme service-owl">
+                  <div class="item">
+                    <div class="img"><img src="./img/about_01.jpg" alt="about1"></div>
+                    <div class="txt">
+                      <h5>소상공인</h5>
+                      <p>
+                        1인사업자, 처음 사업을 진행하시는 기업등을 위한 별도의 정보기술 서비스를 제공합니다.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="img"><img src="./img/about_02.jpg" alt="about2"></div>
+                    <div class="txt">
+                      <h5>중소기업</h5>
+                      <p>
+                        경쟁력을 유지하기 위해 중소기업을 생산성과 빠른 의사결정을 필요로 합니다. 빠른 성장을 위한 정보 서비스를 제공합니다.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="img"><img src="./img/about_03.jpg" alt="about3"></div>
+                    <div class="txt">
+                      <h5>대기업</h5>
+                      <p>
+                        대기업의  IT부서는 필수적입니다.<br />
+                        다만 IT부서가 하지 못하는 다양한 유지보수 서비스를 제공됩니다.
+                      </p>
+                    </div>
+                  </div>
+              </div>
               <div class="service-wrap">
                 <ul class="clearfix">
                   <li>
@@ -154,7 +175,7 @@
                 <span class="highlighter">BLU-IT이 잘하는 일,</span> <br />
                 고객분들과 함께 성공으로 달려갑니다.
               </h3>
-              <div class="owl-carousel owl-theme blu-owl">
+              <div class="owl-carousel owl-theme business-owl">
                   <div class="item">
                     <div class="icon-box"><img src="./img/ic_work_01.png" alt="work1"></div>
                     <h5>홈페이지 제작</h5>
@@ -474,29 +495,8 @@
       </div>
       <script>
       $(document).ready(function(){
-        // BLU-IT이 잘하는 일, 모바일버전 작업
-        $('.owl-carousel').owlCarousel({
-            loop:true,
-            margin:50,
-            responsiveClass:true,
-            responsive:{
-                0:{
-                    items:1,
-                    nav:false
-                },
-                600:{
-                    items:3,
-                    nav:false
-                }
-            }
-        });
+
       });
-      // var app = new Vue({
-      //     el: '#app',
-      //     data: {
-      //       message: '안녕하세요 Vue!'
-      //     }
-      //   })
       </script>
   </body>
 </html>
