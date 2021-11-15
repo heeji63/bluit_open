@@ -41,7 +41,7 @@ $(document).ready(function() {
     loop: true,
     autoplay: {
       delay: 3000,
-      disableOnInteraction:false,
+      disableOnInteraction:true,
     },
     speed:700,
     slidesPerView: 2,
@@ -64,8 +64,8 @@ $(document).ready(function() {
         // $(".txt-slider li").find("span").addClass("on");
         $(".txt-slider li").removeClass("on");
         $(".txt-slider li:eq("+txtShowNum+")").addClass("on");
-        $(".txt-slider li").find("span").removeClass("on");
-        $(".txt-slider li:eq("+txtShowNum+")").find("span").addClass("on");
+        $(".txt-slider li").find(".highlighter").removeClass("on");
+        $(".txt-slider li:eq("+txtShowNum+")").find(".highlighter").addClass("on");
       }
     },
     breakpoints: {
@@ -87,8 +87,8 @@ $(document).ready(function() {
             // $(".txt-slider li").find("span").addClass("on");
             $(".txt-slider li").removeClass("on");
             $(".txt-slider li:eq("+txtShowNum+")").addClass("on");
-            $(".txt-slider li").find("span").removeClass("on");
-            $(".txt-slider li:eq("+txtShowNum+")").find("span").addClass("on");
+            $(".txt-slider li").find(".highlighter").removeClass("on");
+            $(".txt-slider li:eq("+txtShowNum+")").find(".highlighter").addClass("on");
           }
         },
       },
