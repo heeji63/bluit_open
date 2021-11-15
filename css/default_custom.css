@@ -45,7 +45,7 @@ textarea {font-family: 'Noto Sans KR', Arial;}
 .sub-tit{padding:3vw 0 4vw;font-size: 2.0835vw;text-align: center;color:#171717;}
 .highlighter {text-decoration: none;display: inline-block;position: relative;}
 .highlighter:after {background: none repeat scroll 0 0 transparent;bottom: 4px;content: "";display: block;height: 7px;left: 50%;position: absolute;background: #52C3EE;transition: width 0.7s ease 0s, left 0.7s ease 0s;width: 0;z-index:-1;}
-.contents.on .highlighter:after {width: 100%;left: 0;}
+.contents.on .sub-tit .highlighter:after {width: 100%;left: 0;}
 .sub-tit-wrap .sub-tit{font-size: 2vw;padding: 3.5vw 0 1.5vw;}
 .sub-tit-wrap p{font-size: 1.122vw;text-align: center;font-weight: bold;}
 .footer{background: #444; color:#fff;padding:50px 10.5vw;font-family: 'Noto Sans KR', Arial;}
