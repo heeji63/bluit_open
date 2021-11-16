@@ -14,6 +14,7 @@
   $qa_2 = isset($_POST['qa_2']) ? strip_tags($_POST['qa_2']) : '';
   $qa_3 = isset($_POST['qa_3']) ? strip_tags($_POST['qa_3']) : '';
 
+  echo "$mb_id";
   // e-mail 체크
   // $qa_email = '';
   // if(isset($_POST['qa_email']) && $_POST['qa_email'])
@@ -62,9 +63,9 @@
               where qa_id = '$qa_id' ";
   sql_query($sql);
 
-  $result_url = G5_BBS_URL.'/contact.php';
-  alert('접수 되었습니다.');
-  goto_url($result_url);
+  // $result_url = G5_BBS_URL.'/contact.php';
+  // alert('접수 되었습니다.');
+  // goto_url($result_url);
   // $result = sql_query($sql);
   // $row=sql_fetch_array($result);
   // if (count($row) > 0) {

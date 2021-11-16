@@ -56,7 +56,7 @@
         <!-- <li><a href="#">contact</a></li> -->
       </ul>
     </div>
-  <form name="fwrite" id="fwrite" action="./set_contact.php" onsubmit="return fwrite_submit(this);" method="post" enctype="multipart/form-data" autocomplete="off">
+  <form name="fwrite" id="fwrite" method="post" enctype="multipart/form-data" autocomplete="off">
     <input type="hidden" name="w" value="<?php echo $w ?>">
     <input type="hidden" name="qa_id" value="<?php echo $qa_id ?>">
     <input type="hidden" name="sca" value="<?php echo $sca ?>">
@@ -114,7 +114,7 @@
               <div class="items items-12">
                 <h4>필요한 서비스</h4>
                 <ul class="service-ul">
-                  <li><input id="serv1" type="radio" value="웹사이트 구축" name="qa_3"><label for="serv1">웹사이트 구축</label></li>
+                  <li><input id="serv1" type="radio" value="웹사이트 구축" name="qa_3" checked><label for="serv1">웹사이트 구축</label></li>
                   <li><input id="serv2" type="radio" value="웹사이트 운영" name="qa_3"><label for="serv2">웹사이트 운영</label></li>
                   <li><input id="serv3" type="radio" value="웹사이트 유지보수" name="qa_3"><label for="serv3">웹사이트 유지보수</label></li>
                   <li><input id="serv4" type="radio" value="APP 제작" name="qa_3"><label for="serv4">APP 제작</label></li>
@@ -134,7 +134,8 @@
               <input id="prov" type="checkbox" name="" value=""><label for="prov"><span>개인정보 보호정책</span>에 동의합니다.</label>
             </div>
             <div class="btn-wrap">
-              <button type="submit" id="btn_submit" accesskey="s" class="send-btn">보내기</button>
+              <button type="button" id="btn_submit" onclick="fwrite_submit();"
+                accesskey="s" class="send-btn">보내기</button>
             </div>
           </form>
         </div>
@@ -169,42 +170,67 @@
 
         function fwrite_submit(f)
         {
-            var subject = "";
-            var content = "";
-            $.ajax({
-                url: g5_bbs_url+"/ajax.filter.php",
-                type: "POST",
-                data: {
-                    "subject": f.qa_subject.value,
-                    "content": f.qa_content.value
-                },
-                dataType: "json",
-                async: false,
-                cache: false,
-                success: function(data, textStatus) {
-                    subject = data.subject;
-                    content = data.content;
-                }
-            });
-
-            if (subject) {
-                alert("제목에 금지단어('"+subject+"')가 포함되어있습니다");
-                f.qa_subject.focus();
-                return false;
-            }
-
-            if (content) {
-                alert("내용에 금지단어('"+content+"')가 포함되어있습니다");
-                if (typeof(ed_qa_content) != "undefined")
-                    ed_qa_content.returnFalse();
-                else
-                    f.qa_content.focus();
-                return false;
-            }
-
-            document.getElementById("btn_submit").disabled = "disabled";
-
-            return true;
+          var mb_id = $("#mb_id").val();
+          var qa_name = $("#qa_name").val();
+          var qa_email = $("#qa_email").val();
+          var qa_hp = $("#qa_hp").val();
+          var qa_content = $("#qa_content").val();
+          var qa_1 = $("#qa_1").val();
+          var qa_2 = $("#qa_2").val();
+          var qa_3 = $("#qa_3").val();
+          var params = {mb_id:mb_id, qa_name:qa_name
+                      , qa_email:qa_email, qa_hp:qa_hp
+                      , qa_content:qa_content, qa_1:qa_1
+                      , qa_2:qa_2, qa_3:qa_3};
+          $.ajax({
+              url: "./bbs/set_contact.php",
+              type : "post",
+          		data : params,
+              async: true,
+              cache: false,
+              error : function(xhr, status) {
+              // console.log(xhr, status);
+              },
+              success: function(data) {
+                alert('접수되었습니다.');
+              }
+          });
+            // var subject = "";
+            // var content = "";
+            // $.ajax({
+            //     url: g5_bbs_url+"/ajax.filter.php",
+            //     type: "POST",
+            //     data: {
+            //         "subject": f.qa_subject.value,
+            //         "content": f.qa_content.value
+            //     },
+            //     dataType: "json",
+            //     async: false,
+            //     cache: false,
+            //     success: function(data, textStatus) {
+            //         subject = data.subject;
+            //         content = data.content;
+            //     }
+            // });
+            //
+            // if (subject) {
+            //     alert("제목에 금지단어('"+subject+"')가 포함되어있습니다");
+            //     f.qa_subject.focus();
+            //     return false;
+            // }
+            //
+            // if (content) {
+            //     alert("내용에 금지단어('"+content+"')가 포함되어있습니다");
+            //     if (typeof(ed_qa_content) != "undefined")
+            //         ed_qa_content.returnFalse();
+            //     else
+            //         f.qa_content.focus();
+            //     return false;
+            // }
+            //
+            // document.getElementById("btn_submit").disabled = "disabled";
+            // alert('접수되었습니다.');
+            // return true;
         }
     </script>
   </body>
