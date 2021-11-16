@@ -1,9 +1,6 @@
 <?php
-  // header("Content-Type:text/html;charset=utf-8");
-  // $sub_menu = "400100";
-  // include_once('../bbs/_common.php');
+  $sub_menu = '300800';
   include_once('./_common.php');
-  // include_once('../'.G5_LIB_PATH.'/json.lib.php');
   //
   $w = isset($_POST['w']) ? strip_tags($_POST['w']) : '';
   $mb_id = isset($_POST['mb_id']) ? strip_tags($_POST['mb_id']) : '';
@@ -13,6 +10,8 @@
   $qa_1 = isset($_POST['qa_1']) ? strip_tags($_POST['qa_1']) : '';
   $qa_2 = isset($_POST['qa_2']) ? strip_tags($_POST['qa_2']) : '';
   $qa_3 = isset($_POST['qa_3']) ? strip_tags($_POST['qa_3']) : '';
+  $qa_4 = isset($_POST['qa_4']) ? strip_tags($_POST['qa_4']) : '';
+  $qa_id = isset($_POST['qa_id']) ? strip_tags($_POST['qa_id']) : '';
 
   // e-mail 체크
   // $qa_email = '';
@@ -31,20 +30,17 @@
   $row = sql_fetch(" select MIN(qa_num) as min_qa_num from {$g5['qa_content_table']} ");
   $qa_num = $row['min_qa_num'] - 1;
 
-  $sql = " insert into {$g5['qa_content_table']}
-              set qa_num          = '$qa_num',
-                  qa_name        = '$qa_name',
+  $sql = " update {$g5['qa_content_table']}
+              set qa_name        = '$qa_name',
                   qa_email        = '$qa_email',
                   qa_hp           = '$qa_hp',
                   mb_id           = '$mb_id',
-                  qa_parent       = '$qa_parent',
-                  qa_related      = '$qa_related',
                   qa_content      = '$qa_content',
-                  qa_ip           = '{$_SERVER['REMOTE_ADDR']}',
-                  qa_datetime     = '".G5_TIME_YMDHIS."',
                   qa_1            = '$qa_1',
                   qa_2            = '$qa_2',
-                  qa_3            = '$qa_3' ";
+                  qa_3            = '$qa_3',
+                  qa_4            = '$qa_4'
+            where qa_id = {$qa_id}";
 
   sql_query($sql);
 

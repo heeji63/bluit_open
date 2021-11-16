@@ -13,10 +13,7 @@ $stx = $_POST['stx'];
 $sql_search = "";
 if ($stx != "") {
   $sql_search = " where  mb_id like '%{$stx}%'
-                    or   qa_email like '%{$stx}%'
-                    or   qa_name like '%{$stx}%'
-                    or   qa_content like '%{$stx}%'
-                    or   qa_hp like '%{$stx}%' ";
+                    or   qa_name like '%{$stx}%' ";
 }
 
 $sql = " select count(*) as cnt  FROM {$g5['qa_content_table']}  {$sql_search} ";
