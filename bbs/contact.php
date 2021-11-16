@@ -21,13 +21,13 @@
     <script src="../js/jquery-1.12.4.min.js" type="text/javascript"></script>
     <script src="../js/swiper-bundle.min.js" type="text/javascript"></script>
     <script src="../js/header.js" type="text/javascript"></script>
-    <script src="../js/main.js" type="text/javascript"></script>
+    <!-- <script src="../js/main.js" type="text/javascript"></script> -->
   </head>
   <body>
     <header id="header">
       <div class="header-inner clearfix">
         <h1 class="logo">
-          <a href="index.html"><img src="images/logo.png" alt="blu-it logo"></a>
+          <a href="index.html"><img src="../img/logo.png" alt="blu-it logo"></a>
         </h1>
         <div class="gnb-wrap clearfix">
           <!-- <div class="gnb">
@@ -39,20 +39,20 @@
               <li><a href="#">contact</a></li>
             </ul>
           </div> -->
-          <button type="button" class="menu-btn"><img src="images/menu_btn.png" alt="menu"></button>
+          <button type="button" class="menu-btn"><img src="../img/menu_btn.png" alt="menu"></button>
         </div>
       </div>
     </header>
     <div class="sitemap">
       <h1 class="logo">
-        <a href="index.html"><img src="images/logo.png" alt="blu-it logo"></a>
+        <a href="index.html"><img src="../img/logo.png" alt="blu-it logo"></a>
       </h1>
-      <button type="button" class="close-btn"><img src="images/menu_close_btn.png" alt="close"></button>
+      <button type="button" class="close-btn"><img src="../img/menu_close_btn.png" alt="close"></button>
       <ul class="menu">
-        <li><a href="#"><span class="highlighter">ABOUT</span></a></li>
-        <li><a href="#Service"><span class="highlighter">SERVICES</span></a></li>
-        <li><a href="#Business"><span class="highlighter">BUSINESS</span></a></li>
-        <li><a href="#Work"><span class="highlighter">WORK</span></a></li>
+        <li><a href="../index.html"><span class="highlighter">ABOUT</span></a></li>
+        <li><a href="../index.html#Service"><span class="highlighter">SERVICES</span></a></li>
+        <li><a href="../index.html#Business"><span class="highlighter">BUSINESS</span></a></li>
+        <li><a href="../index.html#Work"><span class="highlighter">WORK</span></a></li>
         <!-- <li><a href="#">contact</a></li> -->
       </ul>
     </div>
@@ -130,7 +130,12 @@
                 <textarea name="qa_content" rows="20"  placeholder="문의 사항을 입력해 주세요"></textarea>
               </div>
             </div>
-            <button type="submit" id="btn_submit" accesskey="s" class="send-btn">보내기</button>
+            <div class="info-prov">
+              <input id="prov" type="checkbox" name="" value=""><label for="prov"><span>개인정보 보호정책</span>에 동의합니다.</label>
+            </div>
+            <div class="btn-wrap">
+              <button type="submit" id="btn_submit" accesskey="s" class="send-btn">보내기</button>
+            </div>
           </form>
         </div>
       </div>
