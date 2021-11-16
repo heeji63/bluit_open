@@ -24,7 +24,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     <div class="gnb-wrap clearfix">
       <div class="gnb">
         <ul class="gnb-ul clearfix">
-          <li><a href="#About">about</a></li>
+          <li><a href="<?php echo G5_THEME_PATH.'/contact.php' ?>">about</a></li>
           <li><a href="#Service">services</a></li>
           <li><a href="#Business">business</a></li>
           <li><a href="#Work">work</a></li>
