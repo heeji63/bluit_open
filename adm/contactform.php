@@ -108,8 +108,8 @@ onsubmit="return frmcontentform_check(this);" method="post" enctype="MULTIPART/F
 </div>
 
 <div class="btn_fixed_top">
-    <a onclick="cate2('<?php echo $w; ?>',<?php echo $cateNo; ?>,'<?php echo $cateNm; ?>');" class="btn btn_02">목록</a>
-    <input type="submit" value="확인" class="btn btn_submit" accesskey="s">
+    <a onclick="list();" class="btn btn_02">목록</a>
+    <!-- <input type="submit" value="확인" class="btn btn_submit" accesskey="s"> -->
 </div>
 
 </form>
@@ -118,6 +118,11 @@ onsubmit="return frmcontentform_check(this);" method="post" enctype="MULTIPART/F
 // [KVE-2018-2089] 취약점 으로 인해 파일 경로 수정시에만 자동등록방지 코드 사용
 ?>
 <script>
+function list(){
+  var form = document.frmcontentform;
+  form.action = "./contactlist.php";
+  form.submit();
+}
 
 </script>
 
