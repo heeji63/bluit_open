@@ -12,78 +12,82 @@
 .items input[type=text]::placeholder{color: #B0B5C7;}
 .items .price-select-wrap{position: relative;}
 .items .price-select-wrap::after{content:'';display:block;width:17px;height:10px;background: url("../img/select_arrow.png") no-repeat 50% 50%;background-size: cover;position: absolute;right:15px;top:50%;margin-top: -5px;}
-.items select{width:100%;outline: none;border:none;border-bottom:2px solid #000;padding:13.5px 15px;font-size: 16px;background: transparent; -webkit-appearance: none;cursor: pointer;}
+.items select{width:100%;outline: none;border:none;border-bottom:2px solid #000;padding:10.5px 15px;font-size: 16px;background: transparent; -webkit-appearance: none;cursor: pointer;}
 .items select::-ms-expand {display: none;}
 .items select option{background: #fff;}
 .items .service-ul{display: flex;justify-content: space-between;}
 .items .service-ul li{padding:10px 0;}
 .items .service-ul li input[type=radio]{display: none;}
-.items .service-ul li input[type=radio] + label{font-size: 16px;position: relative;cursor: pointer;}
-.items .service-ul li input[type=radio] + label::before{content:'';display: inline-block;width:20px;height:20px;border-radius: 10px;border:1px solid #E3E5EE;vertical-align: sub;margin-right: 5px;background: #fff;box-sizing: border-box;}
-.items .service-ul li input[type=radio]:checked + label::after{content:'';display: inline-block;width:12px;height:12px;border-radius: 6px;background: #52C3EE;position: absolute;left:4px;top:50%;margin-top:-6px;}
+.items .service-ul li input[type=radio] + label{font-size: 16px;position: relative;cursor: pointer;vertical-align: middle;}
+.items .service-ul li input[type=radio] + label::before{content:'';display: inline-block;width:20px;height:20px;border-radius: 10px;border:1px solid #E3E5EE;vertical-align: top;margin-right: 5px;background: #fff;box-sizing: border-box;}
+.items .service-ul li input[type=radio]:checked + label::after{content:'';display: inline-block;width:12px;height:12px;border-radius: 6px;background: #52C3EE;position: absolute;left:4px;top:50%;margin-top:-5.5px;}
 .items textarea{resize:none;width:100%;outline: none;font-size: 16px;padding:15px;border:1px solid #E3E5EE;}
-.items h4{margin-bottom:15px;font-size:20px;font-family: 'Noto Sans KR', Arial;}
+.items h4{margin-bottom:15px;font-size:20px;font-family: 'Noto Sans KR', Arial;line-height: 25px;}
+.info-prov{margin:20px 0 25px;text-align: right;}
+.info-prov input[type=checkbox]{vertical-align: middle;}
+.info-prov label{margin-left: 5px;vertical-align: middle;}
+.info-prov label span{font-weight: bold;color:#003972;}
 .btn-wrap{text-align: center;}
-.send-btn{color:#fff;background: url("../img/send_icon.png") no-repeat 90% 50% #F53D55;border:none;padding:15px 65px 15px 25px;border-radius: 7px;font-size: 16px;}
+.send-btn{color:#fff;background: url("../img/send_icon.png") no-repeat 90% 50% #F53D55;border:none;padding:15px 65px 15px 25px;border-radius: 7px;font-size: 16px;cursor: pointer;}
 .bg-line{width:1px;height:60%;transform: skewX(-45deg);background: #52C3EE;position: fixed;top:110%;right:80%;z-index: -1;transition: top ease 0.7s, right ease 0.7s;transition-delay: 0.4s;}
 .contents.on .bg-line{top:17%;right:30%;}
 .bg-figure .figure{position: fixed;z-index: -1;transition: all ease 0.2s;}
-.bg-figure .rectangle1{width:17px;height:17px;background: #23177B;transform: rotate(-20deg);top:16vw;left:5.7vw;animation: figureMove1 2s ease;animation-iteration-count: infinite;}
-.bg-figure .rectangle2{width:34px;height:34px;background: #5DCBFA;transform: rotate(30deg);top:7vw;left:52.5vw;animation: figureMove2 3s ease 0.5s;animation-iteration-count: infinite;}
-.bg-figure .rectangle3{width:26px;height:26px;background: #23177B;transform: rotate(-25deg);top:35vw;right:36.5vw;animation: figureMove3 2s ease 0.7s;animation-iteration-count: infinite;}
-.bg-figure .circle1{width:14px;height:14px;border-radius: 50%;background: #23177B;top:7vw;left:25vw;animation: figureMove4 2.5s ease 0.3s;animation-iteration-count: infinite;}
-.bg-figure .circle2{width:25px;height:25px;border-radius: 50%;background: #23177B;top:15vw;right:5vw;animation: figureMove5 2s ease 0.8s;animation-iteration-count: infinite;}
-.bg-figure .circle3{width:12px;height:12px;border-radius: 50%;background: #5DCBFA;top:32vw;left:11vw;animation: figureMove6 2.5s ease 1s;animation-iteration-count: infinite;}
-.bg-figure .circle4{width:32px;height:32px;border-radius: 50%;background: #4A5CF6;top:40vw;left:23vw;animation: figureMove7 2s ease 0.2s;animation-iteration-count: infinite;}
-.bg-figure .circle5{width:15px;height:15px;border-radius: 50%;background: #5DCBFA;top:43vw;right:27vw;animation: figureMove8 3s ease 1s;animation-iteration-count: infinite;}
-.bg-figure .circle6{width:15px;height:15px;border-radius: 50%;background: #23177B;top:28vw;right:11vw;animation: figureMove9 2s ease 1s;animation-iteration-count: infinite;}
-.bg-figure .triangle1{width:15px;height:25px;border-top: 25px solid #4A5CF6;border-bottom:25px solid transparent;border-left:15px solid transparent;border-right:15px solid transparent;transform: rotate(3deg);top:11vw;right:27vw;animation: figureMove10 3s ease 1s;animation-iteration-count: infinite;}
-@keyframes figureMove1 {
+.bg-figure .rectangle1{width:17px;height:17px;background: #23177B;transform: rotate(-20deg);top:16vw;left:5.7vw;animation: figureMoveC1 2s ease;animation-iteration-count: infinite;}
+.bg-figure .rectangle2{width:34px;height:34px;background: #5DCBFA;transform: rotate(30deg);top:7vw;left:52.5vw;animation: figureMoveC2 3s ease 0.5s;animation-iteration-count: infinite;}
+.bg-figure .rectangle3{width:26px;height:26px;background: #23177B;transform: rotate(-25deg);top:35vw;right:36.5vw;animation: figureMoveC3 2s ease 0.7s;animation-iteration-count: infinite;}
+.bg-figure .circle1{width:14px;height:14px;border-radius: 50%;background: #23177B;top:7vw;left:25vw;animation: figureMoveC4 2.5s ease 0.3s;animation-iteration-count: infinite;}
+.bg-figure .circle2{width:25px;height:25px;border-radius: 50%;background: #23177B;top:15vw;right:5vw;animation: figureMoveC5 2s ease 0.8s;animation-iteration-count: infinite;}
+.bg-figure .circle3{width:12px;height:12px;border-radius: 50%;background: #5DCBFA;top:32vw;left:11vw;animation: figureMoveC6 2.5s ease 1s;animation-iteration-count: infinite;}
+.bg-figure .circle4{width:32px;height:32px;border-radius: 50%;background: #4A5CF6;top:40vw;left:23vw;animation: figureMoveC7 2s ease 0.2s;animation-iteration-count: infinite;}
+.bg-figure .circle5{width:15px;height:15px;border-radius: 50%;background: #5DCBFA;top:43vw;right:27vw;animation: figureMoveC8 3s ease 1s;animation-iteration-count: infinite;}
+.bg-figure .circle6{width:15px;height:15px;border-radius: 50%;background: #23177B;top:28vw;right:11vw;animation: figureMoveC9 2s ease 1s;animation-iteration-count: infinite;}
+.bg-figure .triangle1{width:15px;height:25px;border-top: 25px solid #4A5CF6;border-bottom:25px solid transparent;border-left:15px solid transparent;border-right:15px solid transparent;transform: rotate(3deg);top:11vw;right:27vw;animation: figureMoveC10 3s ease 1s;animation-iteration-count: infinite;}
+@keyframes figureMoveC1 {
 	0% {top:16vw;}
   50% {top:calc(16vw + 20px);}
   100% {top:16vw;}
 }
-@keyframes figureMove2 {
+@keyframes figureMoveC2 {
 	0% {top:7vw;}
   50% {top:calc(7vw + 20px);}
   100% {top:7vw;}
 }
-@keyframes figureMove3 {
+@keyframes figureMoveC3 {
 	0% {top:35vw;}
   50% {top:calc(35vw - 20px);}
   100% {top:35vw;}
 }
-@keyframes figureMove4 {
+@keyframes figureMoveC4 {
 	0% {top:7vw;}
   50% {top:calc(7vw + 20px);}
   100% {top:7vw;}
 }
-@keyframes figureMove5 {
+@keyframes figureMoveC5 {
 	0% {top:15vw;}
   50% {top:calc(15vw + 20px);}
   100% {top:15vw;}
 }
-@keyframes figureMove6 {
+@keyframes figureMoveC6 {
 	0% {top:32vw;}
   50% {top:calc(32vw - 20px);}
   100% {top:32vw;}
 }
-@keyframes figureMove7 {
+@keyframes figureMoveC7 {
 	0% {top:40vw;}
   50% {top:calc(40vw - 20px);}
   100% {top:40vw;}
 }
-@keyframes figureMove8 {
+@keyframes figureMoveC8 {
 	0% {top:43vw;}
   50% {top:calc(43vw - 20px);}
   100% {top:43vw;}
 }
-@keyframes figureMove9 {
+@keyframes figureMoveC9 {
 	0% {top:28vw;}
   50% {top:calc(28vw + 20px);}
   100% {top:28vw;}
 }
-@keyframes figureMove10 {
+@keyframes figureMoveC10 {
 	0% {top:11vw;}
   50% {top:calc(11vw + 20px);}
   100% {top:11vw;}

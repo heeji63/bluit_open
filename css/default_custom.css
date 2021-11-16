@@ -6,14 +6,15 @@ ul,li{list-style:none;}
 a{text-decoration: none;}
 button{margin:0;padding:0;font-family:'Noto Sans KR', Arial;}
 .clearfix::after{content:"";display:block;clear: both;}
-html,body {position: relative;height: 100%;min-height:100%;font-family:'Montserrat', 'Noto Sans KR', Arial;}
+html,body {position: relative;width:100%;height: 100%;min-height:100%;font-family:'Montserrat', 'Noto Sans KR', Arial;}
 html.show,html.show body {min-height:850px;}
 body {font-family:'Montserrat', 'Noto Sans KR', Arial;}
 input {font-family: 'Noto Sans KR', Arial;}
 label {font-family: 'Noto Sans KR', Arial;}
 textarea {font-family: 'Noto Sans KR', Arial;}
 /* header */
-#header{position: fixed;z-index: 998;width:100%;}
+#header{position: fixed;z-index: 998;width:100%;transition: all ease 0.2s;}
+#header.on{background: #fff;box-shadow: 1px 0 5px rgba(0,0,0,0.25);}
 #header .header-inner{padding:3.5vw 3.5vw 0;}
 #header .logo{float: left;margin-top: -5px;}
 #header .logo a{font-size: 0;}
@@ -25,7 +26,7 @@ textarea {font-family: 'Noto Sans KR', Arial;}
 #header .gnb .gnb-ul li:last-child{margin-right:0;}
 #header .gnb .gnb-ul li a{font-size: 18px;color:#000;font-weight: bold;}
 #header .gnb .gnb-ul li a:hover{color:#FF3D56;}
-#header .menu-btn{border:none;background: none;float: right;cursor: pointer;}
+#header .menu-btn{border:none;background: none;float: right;cursor: pointer;margin-top:5px;}
 .sitemap{width:100%;height:100%;background: url("../img/menu_bg.png") no-repeat left bottom #F2F3F7;background-size: contain;position: fixed;top:0;left:0;z-index: 999;display: none;}
 .sitemap .logo{float: left;margin:3.5vw 0 0 3.5vw;margin-top:calc(3.5vw - 5px);}
 .sitemap .logo a{font-size: 0;}
