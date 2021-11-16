@@ -6,7 +6,8 @@ ul,li{list-style:none;}
 a{text-decoration: none;}
 button{margin:0;padding:0;font-family:'Noto Sans KR', Arial;}
 .clearfix::after{content:"";display:block;clear: both;}
-html,body {position: relative;height: 100%;min-height:940px;font-family:'Montserrat', 'Noto Sans KR', Arial;}
+html,body {position: relative;height: 100%;min-height:100%;font-family:'Montserrat', 'Noto Sans KR', Arial;}
+html.show,html.show body {min-height:850px;}
 body {font-family:'Montserrat', 'Noto Sans KR', Arial;}
 input {font-family: 'Noto Sans KR', Arial;}
 label {font-family: 'Noto Sans KR', Arial;}
