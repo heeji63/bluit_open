@@ -18,7 +18,7 @@ include_once (G5_ADMIN_PATH.'/admin.head.php');
 
 <form name="frmcontentform" action="./cateformupdate2.php"
 onsubmit="return frmcontentform_check(this);" method="post" enctype="MULTIPART/FORM-DATA" >
-<input type="hidden" name="w" value="<?php echo $w; ?>">
+<input type="hidden" name="w" id="w" value="<?php echo $w; ?>">
 <input type="hidden" name="co_html" value="1">
 
 <div class="tbl_frm01 tbl_wrap">
@@ -90,7 +90,13 @@ onsubmit="return frmcontentform_check(this);" method="post" enctype="MULTIPART/F
           <label for="qa_3">필요한 서비스</label>
         </th>
         <td>
-          <input type="text" name="qa_3" value="<?php echo $co['qa_3']; ?>" id="qa_3" class="frm_input" size="80">
+          <li><input type="radio" <?php if($co['qa_3'] == "웹사이트 구축") {echo "checked";} ?> value="웹사이트 구축" name="qa_3"><label for="serv1">웹사이트 구축</label></li>
+          <li><input type="radio" <?php if($co['qa_3'] == "웹사이트 운영") {echo "checked";} ?> value="웹사이트 운영" name="qa_3"><label for="serv2">웹사이트 운영</label></li>
+          <li><input type="radio" <?php if($co['qa_3'] == "웹사이트 유지보수") {echo "checked";} ?> value="웹사이트 유지보수" name="qa_3"><label for="serv3">웹사이트 유지보수</label></li>
+          <li><input type="radio" <?php if($co['qa_3'] == "APP 제작") {echo "checked";} ?> value="APP 제작" name="qa_3"><label for="serv4">APP 제작</label></li>
+          <li><input type="radio" <?php if($co['qa_3'] == "솔루션 제작") {echo "checked";} ?> value="솔루션 제작" name="qa_3"><label for="serv5">솔루션 제작</label></li>
+          <li><input type="radio" <?php if($co['qa_3'] == "호스팅") {echo "checked";} ?> value="호스팅" name="qa_3"><label for="serv6">호스팅</label></li>
+          <li><input type="radio" <?php if($co['qa_3'] == "온라인 마케팅") {echo "checked";} ?> value="온라인 마케팅" name="qa_3"><label for="serv7">온라인 마케팅</label></li>
         </td>
     </tr>
     <tr>
