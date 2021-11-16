@@ -16,10 +16,10 @@ $g5['title'] = '문의상세';
 include_once (G5_ADMIN_PATH.'/admin.head.php');
 ?>
 
-<form name="frmcontentform" action="./cateformupdate2.php"
-onsubmit="return frmcontentform_check(this);" method="post" enctype="MULTIPART/FORM-DATA" >
+<form name="frmcontentform"  method="post" enctype="MULTIPART/FORM-DATA" >
 <input type="hidden" name="w" id="w" value="<?php echo $w; ?>">
 <input type="hidden" name="co_html" value="1">
+<input type="hidden" name="qa_id" id="qa_id" value="<?php echo $qa_id ?>">
 
 <div class="tbl_frm01 tbl_wrap">
     <table>
@@ -82,7 +82,11 @@ onsubmit="return frmcontentform_check(this);" method="post" enctype="MULTIPART/F
           <label for="qa_2">예산금액</label>
         </th>
         <td>
-          <input type="text" name="qa_2" value="<?php echo $co['qa_2']; ?>" id="qa_2" class="frm_input" size="80">
+          <select name="qa_2" id="qa_2">
+            <option <?if($co['qa_2'] == "1000~2000") {echo "selected";}?> value="1000~2000">1000~2000</option>
+            <option <?if($co['qa_2'] == "2000~5000") {echo "selected";}?> value="2000~5000">2000~5000</option>
+            <option <?if($co['qa_2'] == "5000~") {echo "selected";} ?> value="5000~">5000~</option>
+          </select>
         </td>
     </tr>
     <tr>
@@ -104,9 +108,15 @@ onsubmit="return frmcontentform_check(this);" method="post" enctype="MULTIPART/F
           <label for="qa_datetime">접수 날짜</label>
         </th>
         <td>
-          <input type="text" name="qa_datetime" value="<?php echo $co['qa_datetime']; ?>"
+          <input type="text" name="qa_datetime" value="<?php echo $co['qa_datetime']; ?>" readonly
           id="qa_datetime" class="frm_input" size="80">
         </td>
+    </tr>
+    <tr>
+        <th scope="row">
+          <label for="qa_datetime">여분필드</label>
+        </th>
+        <td><textarea type="text" name="qa_4" id="qa_4" class="frm_input"><?php echo $co['qa_4']; ?></textarea></td>
     </tr>
 
     </tbody>
@@ -115,6 +125,7 @@ onsubmit="return frmcontentform_check(this);" method="post" enctype="MULTIPART/F
 
 <div class="btn_fixed_top">
     <a onclick="list();" class="btn btn_02">목록</a>
+    <a onclick="set();" class="btn btn_03">수정</a>
     <!-- <input type="submit" value="확인" class="btn btn_submit" accesskey="s"> -->
 </div>
 
@@ -128,6 +139,36 @@ function list(){
   var form = document.frmcontentform;
   form.action = "./contactlist.php";
   form.submit();
+}
+function set(){
+  var mb_id = $("#mb_id").val();
+  var qa_name = $("#qa_name").val();
+  var qa_email = $("#qa_email").val();
+  var qa_hp = $("#qa_hp").val();
+  var qa_content = $("#qa_content").val();
+  var qa_1 = $("#qa_1").val();
+  var qa_2 = $("#qa_2").val();
+  var qa_3 = $("input[name='qa_3']:checked").val();
+  var qa_4 = $("#qa_4").val();
+  var qa_id = $("#qa_id").val();
+  var params = {mb_id:mb_id, qa_name:qa_name
+              , qa_email:qa_email, qa_hp:qa_hp
+              , qa_content:qa_content, qa_1:qa_1
+              , qa_2:qa_2, qa_3:qa_3, qa_4:qa_4
+              , qa_id:qa_id};
+  $.ajax({
+      url: "./set_contact_adm.php",
+      type : "post",
+      data : params,
+      async: true,
+      cache: false,
+      error : function(xhr, status) {
+      // console.log(xhr, status);
+      },
+      success: function(data) {
+        alert('수정 되었습니다.');
+      }
+  });
 }
 
 </script>
