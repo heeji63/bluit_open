@@ -49,7 +49,9 @@ textarea {font-family: 'Noto Sans KR', Arial;}
 .highlighter:after {background: none repeat scroll 0 0 transparent;bottom: 4px;content: "";display: block;height: 7px;left: 50%;position: absolute;background: #52C3EE;transition: width 0.7s ease 0s, left 0.7s ease 0s;width: 0;z-index:-1;}
 .contents.on .sub-tit .highlighter:after {width: 100%;left: 0;}
 .sub-tit-wrap .sub-tit{font-size: 2vw;padding: 3.5vw 0 1.5vw;}
+.sub-tit-wrap .sub-tit.mob{display: none;}
 .sub-tit-wrap p{font-size: 1.122vw;text-align: center;font-weight: bold;}
+.sub-tit-wrap p br:first-child{display: none;}
 .footer{background: #444; color:#fff;padding:50px 10.5vw;font-family: 'Noto Sans KR', Arial;}
 .footer .foot-tit{font-size: 18px;}
 .footer .foot-copyright{float: left;font-size: 15px;color:#bcbcbc;margin-top:25px;}

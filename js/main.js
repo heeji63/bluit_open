@@ -9,21 +9,25 @@ $(document).ready(function() {
   $(function () {
     // 해당 섹션으로 스크롤 이동
     $menu.on('click','a', function(e){
-      var $target = $(this).parent(),
-          idx = $target.index(),
-          section = $contents.eq(idx),
-          offsetTop = section.offset().top;
-      $doc.stop().animate(
-        { scrollTop :offsetTop },
-        500,
-        'swing',
-        // function() {
-        //     $( this ).animate( {
-        //       scrollTop :offsetTop,
-        //     }, 350, 'linear');
-        //   }
-      );
-      return false;
+      if($(this).parent("li").index() == 0){
+
+      }else{
+        var $target = $(this).parent(),
+            idx = $target.index(),
+            section = $contents.eq(idx),
+            offsetTop = section.offset().top;
+        $doc.stop().animate(
+          { scrollTop :offsetTop },
+          500,
+          'swing',
+          function() {
+              $( this ).animate( {
+                scrollTop :offsetTop,
+              }, 350, 'linear');
+            }
+        );
+        return false;
+      }
     });
     $menuMobile.on('click','a', function(e){
       var $target = $(this).parent(),

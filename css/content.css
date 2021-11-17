@@ -1,3 +1,24 @@
+/* About */
+.about-wrap{height: 100%;position: relative;}
+.about-wrap li{float: left;width:50%;position: absolute;}
+.about-wrap li:first-child{width:calc(50% - 5vw);left:5vw;top:2vw;}
+.about-wrap li:nth-child(2){right:0;bottom: 4vw;}
+.about-wrap li .main-tit{font-size: 5.21vw;line-height: 1;margin-bottom: 50px;position: relative;}
+.about-wrap li .main-tit span{font-size: 0.85em;}
+.contents.on .about-wrap li .about-img{width:100%;}
+.about-wrap li .sub-txt h4{font-size: 1.57vw;line-height: 1.5;margin-bottom: 35px;color: #171717;position: relative;}
+.about-wrap li .sub-txt p{font-family: "Noto Sans KR", Arial;font-size: 1vw;line-height: 1.5;letter-spacing: -0.5px;color: #171717;position: relative;}
+.bg-box{width:100%;height:12vw;position: absolute;bottom:0;background: #F2F3F7;z-index: -1;}
+#About .bg-line{position: absolute;height:57%;z-index: -2;}
+#About.contents.on .bg-line{top:12%;right:40%;}
+.work-field{margin-top: -30px;}
+.work-field li{float: left;margin-left: 50px;font-weight: bold;}
+.work-field li:first-child{margin-left:5vw;}
+.about-bluit{width:calc(100% - 35vw);margin: 0 auto;}
+.about-bluit img{width:100%;}
+#AboutAs{background: #fff;}
+#AboutAs .sub-txt h4{font-size: 1.57vw;line-height: 1.5;margin-bottom: 35px;color: #171717;position: relative;text-align: center;margin-top:3vw;}
+#AboutAs .sub-txt p{font-family: "Noto Sans KR", Arial;font-size: 1vw;line-height: 1.5;letter-spacing: -0.5px;color: #171717;position: relative;text-align: center;margin-top: 20px;}
 /* Contact */
 #contact{height:auto;overflow: hidden;}
 #contact .inner{padding: 6.28vw 15.5vw;}

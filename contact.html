@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title> BLU-IT - IT는 신뢰가 기본.</title>
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <link rel="icon" href="./img/favicon.ico">
     <meta name="viewport"content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
     <meta name="naver-site-verification" content="9df6f17a070980f60559eeef9f8d9d5967aa1970" />
     <meta name="title" content="블루잇" />
@@ -21,7 +23,7 @@
     <script src="./js/jquery-1.12.4.min.js" type="text/javascript"></script>
     <script src="./js/swiper-bundle.min.js" type="text/javascript"></script>
     <script src="./js/header.js" type="text/javascript"></script>
-    <!-- <script src="../js/main.js" type="text/javascript"></script> -->
+    <script src="./js/content.js" type="text/javascript"></script>
   </head>
   <body>
     <header id="header">
@@ -49,10 +51,10 @@
       </h1>
       <button type="button" class="close-btn"><img src="./img/menu_close_btn.png" alt="close"></button>
       <ul class="menu">
-        <li><a href="../index.html"><span class="highlighter">ABOUT</span></a></li>
-        <li><a href="../index.html#Service"><span class="highlighter">SERVICES</span></a></li>
-        <li><a href="../index.html#Business"><span class="highlighter">BUSINESS</span></a></li>
-        <li><a href="../index.html#Work"><span class="highlighter">WORK</span></a></li>
+        <li><a href="./about.html"><span class="highlighter">ABOUT</span></a></li>
+        <li><a href="./index.html#Service"><span class="highlighter">SERVICES</span></a></li>
+        <li><a href="./index.html#Business"><span class="highlighter">BUSINESS</span></a></li>
+        <li><a href="./index.html#Work"><span class="highlighter">WORK</span></a></li>
         <!-- <li><a href="#">contact</a></li> -->
       </ul>
     </div>
@@ -69,8 +71,11 @@
           <h3 class="sub-tit">
             <span class="highlighter">블루잇에 의뢰할 프로젝트가 있으신가요?</span>
           </h3>
+          <h3 class="sub-tit mob">
+            <span class="highlighter">블루잇에 의뢰할 프로젝트가</span><br /><span class="highlighter">있으신가요?</span>
+          </h3>
           <p>
-            우리와 함께 성장하고 싶으신가요? 블루잇은 항상 열려있습니다.<br />
+            우리와 함께 성장하고 싶으신가요?<br /> 블루잇은 항상 열려있습니다.<br />
             전화, 팩스, 메일로 얼마든 문의해 주세요.
           </p>
         </div>
@@ -232,31 +237,6 @@
             // alert('접수되었습니다.');
             // return true;
         }
-
-        $(document).ready(function(){
-          var scrollLoc = $(document).scrollTop();
-          if(scrollLoc > 0){
-            if($(window).width() < 769){
-              $("#header").addClass('on');
-            }else{
-              $("#header").removeClass('on');
-            }
-          }else{
-            $("#header").removeClass('on');
-          }
-          $(window).scroll(function(){
-            var scrollLoc = $(document).scrollTop();
-            if(scrollLoc > 0){
-              if($(window).width() < 769){
-                $("#header").addClass('on');
-              }else{
-                $("#header").removeClass('on');
-              }
-            }else{
-              $("#header").removeClass('on');
-            }
-          });
-        });
     </script>
   </body>
 </html>
