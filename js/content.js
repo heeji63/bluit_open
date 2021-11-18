@@ -38,13 +38,13 @@ $(document).ready(function() {
   window.addEventListener('scroll', saFunc);
 
   //세로가 가로보다 짧아졌을 경우 대응
-  if($(window).width() > $(window).height()-100){
+  if($(window).width() > $(window).height()-400){
     $('html').addClass('show');
   }else{
     $('html').removeClass('show');
   }
   $(window).resize(function(){
-    if($(window).width() > $(window).height()-100){
+    if($(window).width() > $(window).height()-400){
       $('html').addClass('show');
     }else{
       $('html').removeClass('show');
