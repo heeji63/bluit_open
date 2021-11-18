@@ -252,7 +252,7 @@
   .txt-slider li .sub .slide-effect-txt{font-size: 14px;}
   .footer .info li{float: none;margin-left:0;}
   /* contact */
-  #contact .inner{padding:21vh 5.5vh;}
+  #contact .inner{padding:21vh 3.5vh;}
   /* .sub-tit-wrap .sub-tit{font-size: 4vw;}
   .sub-tit-wrap p{font-size: 2.4vw;} */
   #contact .sub-tit-wrap .sub-tit{display: none;}
@@ -340,8 +340,6 @@
   .items .service-ul li{width:55%;}
   .items .service-ul li:nth-child(2n){width:45%;}
   .items .service-ul li input[type=radio] + label{font-size: 12.5px;}
-  .items .service-ul li input[type=radio] + label::before{width:16px;height:16px;border-radius: 8px;}
-  .items .service-ul li input[type=radio]:checked + label::after{width:10px;height:10px;border-radius: 5px;left:3px;margin-top: -7px;}
   .info-prov label{font-size: 12.5px;}
   .send-btn{font-size: 16px;padding:18px 80px 18px 25px;}
   /* about */

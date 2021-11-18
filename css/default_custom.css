@@ -32,7 +32,7 @@ textarea {font-family: 'Noto Sans KR', Arial;}
 .sitemap .logo a{font-size: 0;}
 .sitemap .logo a img{display: block;width:55px;}
 .sitemap .close-btn{border:none;position: absolute;top:3.5vw;right:4vw;cursor: pointer;}
-.sitemap .menu{padding:15vw 3.5vw 0 0;float: right;}
+.sitemap .menu{padding:15vh 3.5vw 0 0;float: right;}
 .sitemap .menu li{margin-top:15px;text-align: right;}
 .sitemap .menu li:first-child{margin-top:0;}
 .sitemap .menu li a{font-size: 4.8vw;font-weight: bold;color:#000;line-height: 1.5;transition:all 0.3s ease 0s;}
