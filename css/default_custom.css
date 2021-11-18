@@ -35,7 +35,7 @@ textarea {font-family: 'Noto Sans KR', Arial;}
 .sitemap .menu{padding:15vw 3.5vw 0 0;float: right;}
 .sitemap .menu li{margin-top:15px;text-align: right;}
 .sitemap .menu li:first-child{margin-top:0;}
-.sitemap .menu li a{font-size: 4.8vw;font-weight: bold;color:#000;line-height: 1;transition:all 0.3s ease 0s;}
+.sitemap .menu li a{font-size: 4.8vw;font-weight: bold;color:#000;line-height: 1.5;transition:all 0.3s ease 0s;}
 .sitemap .menu li a .highlighter{text-decoration: none;display: inline-block;position: relative;}
 .sitemap .menu li a .highlighter:after {background: none repeat scroll 0 0 transparent;top: 70%;content: "";display: block;height: 7px;left: 0;position: absolute;background: #52C3EE;transition: width 0.2s ease 0s, left 0.2s ease 0s;width: 0;z-index: 1;}
 .sitemap .menu li a:hover{font-size: 5.17vw;}
