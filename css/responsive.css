@@ -190,7 +190,7 @@
   #header .gnb{display: none;}
   .sitemap .logo{margin: 20px 0 0 8.5vw;}
   .sitemap .close-btn{top:30px;right:11vw;}
-  .sitemap .menu{padding:20vw 8.5vw 0 0;}
+  .sitemap .menu{padding:20vw 8.5vw 15vw 0;}
   .sitemap .menu li a{font-size: 50px;}
   .sitemap .menu li a:hover{font-size: 50px;}
   /* main */
@@ -201,7 +201,7 @@
   .content1 .main-visual li .sub-txt h4{font-size: 5vw;margin-bottom:7vw;}
   .content1 .main-visual li .sub-txt p{font-size: 2.5vw;}
   /* .content2 .inner{padding:70px 30px;} */
-  .sub-tit{font-size: 5vw;padding:5vw 0 7vw;}
+  .sub-tit{font-size: 4.5vw;padding:5vw 0 7vw;}
   #Service .bg-figure .rectangle1{top:39vw;}
   #Service .bg-figure .rectangle2{width:25px;height:25px;}
   #Service .bg-figure .rectangle3{bottom: 74vw;}

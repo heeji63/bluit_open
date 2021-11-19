@@ -105,7 +105,7 @@ $(document).ready(function() {
   // 더욱 고도화된 IT서비스 모바일버전 작업
   $('.service-owl').owlCarousel({
       loop:true,
-      margin:50,
+      margin:40,
       responsiveClass:true,
       responsive:{
           0:{
@@ -121,7 +121,7 @@ $(document).ready(function() {
   // BLU-IT이 잘하는 일, 모바일버전 작업
   $('.business-owl').owlCarousel({
       loop:true,
-      margin:50,
+      margin:40,
       responsiveClass:true,
       responsive:{
           0:{

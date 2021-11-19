@@ -4,6 +4,7 @@
 .about-wrap li:first-child{width:calc(50% - 5vw);left:5vw;top:7vw;}
 .about-wrap li:nth-child(2){right:0;bottom: 4vw;}
 .about-wrap li .main-tit{font-size: 5.21vw;line-height: 1;margin-bottom: 50px;position: relative;}
+.about-wrap li .main-tit img{height:85%;position: absolute;top:0;margin-left: 20px;}
 .about-wrap li .main-tit span{font-size: 0.85em;}
 .contents.on .about-wrap li .about-img{width:100%;}
 .about-wrap li .sub-txt h4{font-size: 1.57vw;line-height: 1.5;margin-bottom: 35px;color: #171717;position: relative;}
@@ -40,8 +41,9 @@
 .items .service-ul li{padding:10px 0;}
 .items .service-ul li input[type=radio]{display: none;}
 .items .service-ul li input[type=radio] + label{font-size: 16px;position: relative;cursor: pointer;vertical-align: middle;}
-.items .service-ul li input[type=radio] + label::before{content:'';display: inline-block;width:18px;height:18px;border-radius: 10px;border:1px solid #E3E5EE;vertical-align: middle;margin-right: 5px;background: #fff;box-sizing: border-box;}
-.items .service-ul li input[type=radio]:checked + label::after{content:'';display: inline-block;width:11.5px;height:11.5px;border-radius: 6px;background: #52C3EE;position: absolute;left:3px;top:50%;margin-top:-2.5px;}
+.items .service-ul li input[type=radio] + label .radio-cust{display: inline-block;position: relative;width:18px;height:18px;border-radius: 10px;border:1px solid #E3E5EE;vertical-align: sub;margin-right: 5px;background: #fff;box-sizing: border-box;}
+/* .items .service-ul li input[type=radio] + label .radio-cust::before{content:'';display: inline-block;width:18px;height:18px;border-radius: 10px;border:1px solid #E3E5EE;vertical-align: top;margin-right: 5px;background: #fff;box-sizing: border-box;} */
+.items .service-ul li input[type=radio]:checked + label .radio-cust::after{content:'';display: inline-block;width:10px;height:10px;border-radius: 6px;background: #52C3EE;position: absolute;left:50%;top:50%;margin-top:-5px;margin-left:-5px;}
 .items textarea{resize:none;width:100%;outline: none;font-size: 16px;padding:15px;border:1px solid #E3E5EE;}
 .items h4{margin-bottom:15px;font-size:20px;font-family: 'Noto Sans KR', Arial;line-height: 25px;}
 .info-prov{margin:20px 0 25px;text-align: right;}
