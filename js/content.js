@@ -50,4 +50,51 @@ $(document).ready(function() {
       $('html').removeClass('show');
     }
   });
+
+  //masonry
+    // $('.portfolioWrapInner').masonry({
+    //   // options
+    //     columnWidth: '.all',
+    //     itemSelector: '.all',
+    //     percentPosition: true,
+    //     // gutter: 45
+    // });
+
+
+        var $grid = $('.portfolioWrapInner').masonry({
+          // options...
+          columnWidth: '.grid-item',
+          itemSelector: '.grid-item',
+          percentPosition: true
+           // gutter: 45
+        });
+    // layout Masonry after each image loads
+        $grid.imagesLoaded().progress( function() {
+          $grid.masonry('layout');
+        });
+
+    // init Isotope
+    var $grid = $('.portfolioWrapInner').isotope({
+        itemSelector: '.all'
+        });
+
+    // $('.tab-ul').on( 'click', 'li', function() {
+    //   var filterValue = $(this).children().attr('data-filter');
+    //   $grid.isotope({ filter: filterValue });
+    //   $('.tab-ul li').removeClass('on');
+    //   $(this).addClass('on');
+    // });
+
+    // filter items on button click
+    $('.tab-ul').on( 'click', 'li', function() {
+      if($(this).index() < 4){
+        var filterValue = $(this).children().attr('data-filter');
+        $('.portfolioWrapInner').isotope({ filter: filterValue });
+        $('.tab-ul li').removeClass('on');
+        $(this).addClass('on');
+      }else{
+
+      }
+    });
+
 });

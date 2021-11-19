@@ -20,6 +20,27 @@
 #AboutAs{background: #fff;}
 #AboutAs .sub-txt h4{font-size: 1.57vw;line-height: 1.5;margin-bottom: 35px;color: #171717;position: relative;text-align: center;margin-top:3vw;}
 #AboutAs .sub-txt p{font-family: "Noto Sans KR", Arial;font-size: 1vw;line-height: 1.5;letter-spacing: -0.5px;color: #171717;position: relative;text-align: center;margin-top: 20px;}
+/* work */
+#Portfolio{height:auto;}
+.portfolioTab{margin:20px 0 60px;}
+.portfolioTab .tab-ul{text-align: center;}
+.portfolioTab .tab-ul li{display: inline-block;margin-right:min(55px, 3vw);position: relative;padding:10px 0;}
+.portfolioTab .tab-ul li:last-child{margin-right:0;}
+.portfolioTab .tab-ul li a{font-size:20px;color:#333;font-weight: bold;}
+.portfolioTab .tab-ul li a::after{background: none repeat scroll 0 0 transparent;bottom: -3px;content: "";display: block;height: 2px;left: 50%;position: absolute;background: #000;transition: width 0.4s ease 0s, left 0.4s ease 0s;width: 0;z-index: -1;}
+.portfolioTab .tab-ul li.on a::after{width: 100%;left: 0;}
+.portfolioWrap{width:calc(80% + 45px); margin: 0 auto;}
+.portfolioWrapInner{display: flex;flex-wrap: wrap;}
+.portfolioWrapInner .all{width:calc(33.3333% - 45px);border-radius: 10px;overflow: hidden;box-shadow: 0 4px 8px rgb(190 193 224 / 32%);margin:22.5px;cursor: pointer;}
+.portfolioWrapInner .all .img{font-size: 0;position: relative;}
+.portfolioWrapInner .all .img::before{content:"";display: block;width:100%;height:100%;background: none;position: absolute;left:0;top:0;transition: background-color ease 0.2s;}
+.portfolioWrapInner .all:hover .img::before{background: url("../img/work_more.png") no-repeat 50% 50% rgba(0,0,0,0.4);}
+.portfolioWrapInner .all .img img{width:100%;}
+.portfolioWrapInner .all .txt{padding: 25px 30px;background: #fff;}
+.portfolioWrapInner .all .txt h5{font-size: 20px;color: #333;}
+.portfolioWrapInner .all .txt p{color: #666;margin-top: 15px;}
+/* .portfolioWrapInner div:nth-child(3n).all{margin-right: 0;}
+.portfolioWrapInner div:nth-child(n+4).all{margin-top:45px;} */
 /* Contact */
 #contact{height:auto;overflow: hidden;}
 #contact .inner{padding: 6.28vh 15.5vh;}

@@ -15,11 +15,11 @@
 	100% {transform: scale(1);}
 }
 .content1 .main-visual li:last-child{width:48%;right:0;top:20vh;}
-.content1 .main-visual li .main-tit{font-size: 5.21vw;line-height: 1;margin-bottom:100px;position: relative;opacity:0;top:-50px;transition: opacity ease 0.5s, top ease 0.6s;transition-delay: 0.9s;}
+.content1 .main-visual li .main-tit{font-size: min(100px, 5.21vw);line-height: 1;margin-bottom:100px;position: relative;opacity:0;top:-50px;transition: opacity ease 0.5s, top ease 0.6s;transition-delay: 0.9s;}
 .content1.on .main-visual li .main-tit{opacity:1;top:0;}
-.content1 .main-visual li .sub-txt h4{font-family: "Noto Sans KR", Arial;font-size: 1.87vw;line-height: 1;margin-bottom:45px;color:#171717;position: relative;bottom:-30px;opacity: 0;transition: opacity ease 0.4s, bottom ease 0.5s;transition-delay: 1.3s;}
+.content1 .main-visual li .sub-txt h4{font-family: "Noto Sans KR", Arial;font-size: min(40px,1.87vw);line-height: 1;margin-bottom:45px;color:#171717;position: relative;bottom:-30px;opacity: 0;transition: opacity ease 0.4s, bottom ease 0.5s;transition-delay: 1.3s;}
 .content1.on .main-visual li .sub-txt h4{opacity: 1;bottom:0;}
-.content1 .main-visual li .sub-txt p{font-size: 1.15vw;line-height: 1.5;letter-spacing: -0.5px;color:#171717;position: relative;bottom:-30px;opacity: 0;transition: opacity ease 0.4s, bottom ease 0.5s;transition-delay: 1.6s;}
+.content1 .main-visual li .sub-txt p{font-size: min(25px,1.15vw);line-height: 1.5;letter-spacing: -0.5px;color:#171717;position: relative;bottom:-30px;opacity: 0;transition: opacity ease 0.4s, bottom ease 0.5s;transition-delay: 1.6s;}
 .content1.on .main-visual li .sub-txt p{opacity: 1;bottom:0;}
 .bg-gray{width:42%;height:100%;transform: skewX(-45deg);background: #f2f3f7;position: absolute;top:-100%;left:81%;z-index: -1;transition: top ease 1s, left ease 1s;}
 .contents.on .bg-gray{top:0;left:21%;}
@@ -28,8 +28,8 @@
 .content2{background:#fff;}
 .content2 .inner{position: relative;}
 .service-wrap{width:80%;margin: 0 auto;}
-.service-wrap ul{display: flex;}
-.service-wrap ul li{width:calc(33.3333% - 30px);margin-right: 45px;border-radius: 10px;box-shadow: 0 4px 8px rgba(190, 193, 224, 0.32);overflow: hidden;transition: opacity 0.3s ease-in-out, transform 0.7s ease;}
+.service-wrap ul{display: flex;flex-wrap: wrap;justify-content: space-between;}
+.service-wrap ul li{width:min(calc(33.3333% - 30px), 370px);border-radius: 10px;box-shadow: 0 4px 8px rgba(190, 193, 224, 0.32);overflow: hidden;transition: opacity 0.3s ease-in-out, transform 0.7s ease;}
 .contents.on .service-wrap ul li{animation: showService 0.7s ease-in-out;animation-fill-mode: both;}
 .contents.on .service-wrap ul li:nth-child(2){animation-delay: 0.4s;}
 .contents.on .service-wrap ul li:last-child{animation-delay: 0.8s;}
@@ -106,21 +106,23 @@
   100% {top:11vw;}
 }
 .content3{background:#fafafe;}
-.business-wrap ul li{float: left;width:33.3333%;min-height: 300px;}
+.business-wrap ul{display: flex;flex-wrap: wrap;justify-content: space-between;}
+.business-wrap ul li{width:33.3333%;}
+.business-wrap ul li:nth-child(n+4){margin-top:40px;}
 .business-wrap ul li .icon-box{width:100%;max-width: 64px;background: #fff;padding:15px;border-radius: 16px;overflow: hidden;margin: 0 auto;box-shadow:0 12px 12px rgba(132,138,163,0.1);}
 .business-wrap ul li .icon-box img{width:100%;}
 .business-wrap ul li h5{font-size: 20px;color:#101F41;text-align: center;margin:30px 0 20px;}
 .business-wrap ul li p{color:#71788F;text-align: center;line-height: 1.5;}
 .business-wrap ul li p span{font-size:14px;color:#51AEDC;}
 .content4{background:#fff;}
-.content4 .inner{padding:6.28vw 0;}
-.all-slider-wrap{position: relative;}
+.content4 .inner{padding:6.28vh 0;}
+.all-slider-wrap{position: relative;max-width:2000px;margin: 0 auto;}
 .work-slider{overflow: hidden;position: relative;}
 .work-slider .swiper-slide{position: relative;}
 .work-slider .swiper-slide .img img{display: block;width:100%;}
 .txt-slider{position: absolute;width:calc(50% - 3.5vw);height:100%;top:0;overflow: hidden;right:calc(3.5vw + 1px);z-index: 10;background: #fff;}
 .txt-slider li{height:100%;background: #fff;padding:4vw;}
-.txt-slider li h4{font-size: 2.0835vw;color:#171717;}
+.txt-slider li h4{font-size: min(40px, 2.0835vw);color:#171717;}
 .txt-slider li.on h4 .slide-effect{overflow: hidden;}
 .txt-slider li.on h4 .slide-effect .slide-effect-txt{animation: txtSlide .4s ease-in-out;}
 .txt-slider li.on .highlighter .slide-effect{overflow: hidden;}
