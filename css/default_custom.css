@@ -17,17 +17,17 @@ textarea {font-family: 'Noto Sans KR', Arial;}
 #header.on{background: #fff;box-shadow: 1px 0 5px rgba(0,0,0,0.25);}
 #header .header-inner{padding:5.5vh 3.5vw 0;}
 #header .logo{float: left;margin-top: -5px;}
-#header .logo a{font-size: 0;}
+#header .logo a{font-size: 0;font-size: 0;display: inline-block;width:65px;height:50px;background: url("../img/logo_wt.png") no-repeat 50% 50%;background-size: cover;}
 #header .logo a img{display: block;width:55px;}
 #header .gnb-wrap{float: right;}
 #header .gnb{float: left;margin-top: 1vh;}
 #header .gnb .gnb-ul{margin-right:55px;}
 #header .gnb .gnb-ul li{float: left;margin-right:25px;}
 #header .gnb .gnb-ul li:last-child{margin-right:0;}
-#header .gnb .gnb-ul li a{font-size: 18px;color:#000;font-weight: bold;}
+#header .gnb .gnb-ul li a{font-size: 18px;color:#fff;font-weight: bold;}
 #header .gnb .gnb-ul li a:hover{color:#FF3D56;}
 #header .menu-btn{border:none;background: none;float: right;cursor: pointer;margin-top:5px;width:43px;height:26px;position: relative;}
-#header .menu-btn .btn-line{display: block;width:100%;height:2px;background: #333333;position: absolute;top:0;transition:all ease 0.3s;}
+#header .menu-btn .btn-line{display: block;width:100%;height:2px;background: #fff;position: absolute;top:0;transition:all ease 0.3s;}
 #header .menu-btn span:nth-child(2).btn-line{top:50%;margin-top:-1px;}
 #header .menu-btn .btn-line.short{width:70%;top:100%;margin-top:-1px;}
 #header .menu-btn:hover .btn-line{top:50%;margin-top:-1px;}
@@ -40,15 +40,16 @@ textarea {font-family: 'Noto Sans KR', Arial;}
 .sitemap .menu{padding:10vw 3.5vw 7vw 0;float: right;}
 .sitemap .menu li{margin-top:15px;text-align: right;}
 .sitemap .menu li:first-child{margin-top:0;}
-.sitemap .menu li a{font-size: 4.8vw;font-weight: bold;color:#000;line-height: 1.5;transition:all 0.3s ease 0s;}
+.sitemap .menu li a{font-size: min(80px, 4.8vw);font-weight: bold;color:#000;line-height: 1.5;transition:all 0.3s ease 0s;}
 .sitemap .menu li a .highlighter{text-decoration: none;display: inline-block;position: relative;}
-.sitemap .menu li a .highlighter:after {background: none repeat scroll 0 0 transparent;top: 70%;content: "";display: block;height: 7px;left: 0;position: absolute;background: #52C3EE;transition: width 0.2s ease 0s, left 0.2s ease 0s;width: 0;z-index: 1;}
-.sitemap .menu li a:hover{font-size: 5.17vw;}
+.sitemap .menu li a .highlighter:after {background: none repeat scroll 0 0 transparent;top: 55%;content: "";display: block;height: 7px;left: 0;position: absolute;background: #52C3EE;transition: width 0.2s ease 0s, left 0.2s ease 0s;width: 0;z-index: 1;}
+.sitemap .menu li a:hover{font-size: min(100px, 5.17vw);}
 .sitemap .menu li a:hover .highlighter:after {width: 100%;left: 0;}
 #fullPage {width: 100%;height: 100%;}
 .content-wrapper{width: 100%;height: 100%;}
 .contents{position: relative;height: 100%;}
-.inner{height: 100%;padding:6.28vh 3.5vh;}
+.inner{width:100%;max-width:1300px;height: 100%;margin: 0 auto;padding:6.28vh 3.5vw;}
+#visual .inner, #Work .inner, #About .inner, #AboutAs .inner{max-width:100%;}
 .sub-tit{padding:13vh 0 8vh;font-size: min(40px, 2.0835vw);text-align: center;color:#171717;}
 .highlighter {text-decoration: none;display: inline-block;position: relative;}
 .highlighter:after {background: none repeat scroll 0 0 transparent;bottom: 4px;content: "";display: block;height: 7px;left: 50%;position: absolute;background: #52C3EE;transition: width 0.7s ease 0s, left 0.7s ease 0s;width: 0;z-index:-1;}
@@ -57,8 +58,13 @@ textarea {font-family: 'Noto Sans KR', Arial;}
 .sub-tit-wrap .sub-tit.mob{display: none;}
 .sub-tit-wrap p{font-size: 1.122vw;text-align: center;font-weight: bold;}
 .sub-tit-wrap p br:first-child{display: none;}
-.footer{background: #444; color:#fff;padding:50px 10.5vw;font-family: 'Noto Sans KR', Arial;}
+.btn-wrap{text-align: center;}
+.more-btn-wrap{margin: 37.5px 0 50px;}
+.btn{color:#fff;background: url("../img/send_icon.png") no-repeat 90% 50% #F53D55;border:none;padding:15px 65px 15px 25px;border-radius: 7px;font-size: 16px;cursor: pointer;}
+.footer{background: #444; color:#fff;padding:50px 10.5vw;font-family: 'Noto Sans KR', Arial;position: relative;}
 .footer .foot-tit{font-size: 18px;}
 .footer .foot-copyright{float: left;font-size: 15px;color:#bcbcbc;margin-top:25px;}
 .footer .info{float: right;margin-top:25px;}
 .footer .info li{float: left;font-size: 15px;color:#bcbcbc;margin-left:25px;}
+.contact-btn{width:100px;height:100px;border-radius: 50%;background: url("../img/contact_icon.png") no-repeat 50% 30% #FF3D56;font-size: 14px;text-align: center;color:#fff;line-height: 140px;position: fixed;bottom:70px;right:70px;}
+.footer.on .contact-btn{position: absolute;bottom:auto;top:-170px;}

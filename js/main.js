@@ -26,7 +26,7 @@ $(document).ready(function() {
       return false;
     });
     $menuMobile.on('click','a', function(e){
-      if($(this).parent("li").index() == 0){
+      if($(this).parent("li").index() == 0 || $(this).parent("li").index() == 3){
 
       }else{
         var $target = $(this).parent(),
@@ -149,6 +149,39 @@ $(document).ready(function() {
   window.addEventListener('load', saFunc);
   window.addEventListener('scroll', saFunc);
 
+  var hiTriggerMarginh = $("content2").height() - $("content2").height()/0.55;
+  var hiElementListh = document.querySelectorAll('.content2');
+  var saFuncf = function() {
+    $.each(hiElementListh, function(idx, element){
+      if (!element.classList.contains('rev')) {
+        if (window.innerHeight > element.getBoundingClientRect().top + hiTriggerMarginh) {
+          element.classList.add('rev');
+        }
+      }else if(element.classList.contains('rev')){
+        if (window.innerHeight < element.getBoundingClientRect().top - hiTriggerMarginh){
+          element.classList.remove('rev');
+        }
+      }
+    });
+  };
+
+  var hiTriggerMarginf = 1;
+  var hiElementListf = document.querySelectorAll('.footer');
+  var saFuncf = function() {
+    $.each(hiElementListf, function(idx, element){
+      if (!element.classList.contains('on')) {
+        if (window.innerHeight > element.getBoundingClientRect().top + hiTriggerMarginf) {
+          element.classList.add('on');
+        }
+      }else if(element.classList.contains('on')){
+        if (window.innerHeight < element.getBoundingClientRect().top - hiTriggerMarginf){
+          element.classList.remove('on');
+        }
+      }
+    });
+  };
+  window.addEventListener('load', saFuncf);
+  window.addEventListener('scroll', saFuncf);
   //모바일 회전 대응
   // if(window.orientation == 0) // Portrait
   //  {

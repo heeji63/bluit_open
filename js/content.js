@@ -52,49 +52,57 @@ $(document).ready(function() {
   });
 
   //masonry
-    // $('.portfolioWrapInner').masonry({
-    //   // options
-    //     columnWidth: '.all',
-    //     itemSelector: '.all',
-    //     percentPosition: true,
-    //     // gutter: 45
-    // });
+  var $grid = $('.portfolioWrapInner').masonry({
+    // options...
+    columnWidth: '.grid-item',
+    itemSelector: '.grid-item',
+    percentPosition: true
+     // gutter: 45
+  });
+  // layout Masonry after each image loads
+  $grid.imagesLoaded().progress( function() {
+    $grid.masonry('layout');
+  });
 
-
-        var $grid = $('.portfolioWrapInner').masonry({
-          // options...
-          columnWidth: '.grid-item',
-          itemSelector: '.grid-item',
-          percentPosition: true
-           // gutter: 45
-        });
-    // layout Masonry after each image loads
-        $grid.imagesLoaded().progress( function() {
-          $grid.masonry('layout');
-        });
-
-    // init Isotope
+  // init Isotope
+  $grid.imagesLoaded(function(){
     var $grid = $('.portfolioWrapInner').isotope({
-        itemSelector: '.all'
-        });
-
-    // $('.tab-ul').on( 'click', 'li', function() {
-    //   var filterValue = $(this).children().attr('data-filter');
-    //   $grid.isotope({ filter: filterValue });
-    //   $('.tab-ul li').removeClass('on');
-    //   $(this).addClass('on');
-    // });
-
-    // filter items on button click
-    $('.tab-ul').on( 'click', 'li', function() {
-      if($(this).index() < 4){
-        var filterValue = $(this).children().attr('data-filter');
-        $('.portfolioWrapInner').isotope({ filter: filterValue });
-        $('.tab-ul li').removeClass('on');
-        $(this).addClass('on');
-      }else{
-
-      }
+      itemSelector: '.all'
     });
+  });
+
+  // filter items on button click
+  $('.tab-ul').on( 'click', 'li', function() {
+    if($(this).index() < 4){
+      var filterValue = $(this).children().attr('data-filter');
+      $('.portfolioWrapInner').isotope({ filter: filterValue });
+      // console.log(filterValue);
+      $('.tab-ul li').removeClass('on');
+      $(this).addClass('on');
+    }else{
+
+    }
+  });
+
+  //더보기
+  // $(".all").slice(0, 9).show(); // select the first ten
+  // $("#workMore").click(function(e){ // click event for load more
+  //     $(".all:hidden").slice(0, 9).show(); // select next 10 hidden divs and show them
+  //     // layout Masonry after each image loads
+  //     // init Isotope
+  //     var $grid = $('.portfolioWrapInner').isotope({
+  //       itemSelector: '.all'
+  //     });
+  //     var filterValue = $(this).children().attr('data-filter');
+  //     $('.portfolioWrapInner').isotope({ filter: filterValue });
+  //     $grid.imagesLoaded().progress( function() {
+  //       $grid.masonry('layout');
+  //     });
+  //
+  //     if($(".all:hidden").length == 0){ // check if any hidden divs still exist
+  //         // alert("No more divs"); // alert if there are none left
+  //         $(".more-btn-wrap").hide();
+  //     }
+  // });
 
 });
